@@ -23,6 +23,15 @@ int main()
 
 	cout << Add(3, 4);
 
+	cout << "2 + 2 = " << 2 + 2 << endl;
+	cout << "8 - 2 = " << 8 - 2 << endl;
+	cout << "2 * 8 = " << 2 * 8 << endl;
+	cout << "20 / 7 = " << 20 / 7 << endl;
+	cout << "20 % 7 = " << 20 % 7 << endl;
+
+	cout << "\'A\' + \'B\' - 24 = " << 'A' + 'B' - 24 << endl;
+	cout << "char(\'A\' + \'B\' - 24) = " << char('A' + 'B' - 24) << endl;
+
 	return 0;
 }
 
