@@ -1,47 +1,32 @@
 #include <iostream>
+#include <cmath>
+#include <iomanip>
 
 using namespace std;
 
-const float pi = float(3.14159265358979323846264338);
+const double pi = 3.14159265358979323846264338;
 
-// function prototype
-void Output(string, string, string, string, const string);
-
-int Add(int, int);
+double volumeOfCy(double radius, double height);
+double cir(double radius);
 
 int main()
 {
-	// variable declaration
-	string name = "Jane Doe";
-	string phoneNumber = "5555551234";
-	string email = "doe@gmail.com";
-	string ccNumber = "12345678910";
-	const string birthday = "23091973";		// code is day month year
+	double radius = 15;
+	double height = 0.5;
 
-	// function call
-	Output(name, phoneNumber, email, ccNumber, birthday);
-
-	cout << Add(3, 4);
-
-	cout << "2 + 2 = " << 2 + 2 << endl;
-	cout << "8 - 2 = " << 8 - 2 << endl;
-	cout << "2 * 8 = " << 2 * 8 << endl;
-	cout << "20 / 7 = " << 20 / 7 << endl;
-	cout << "20 % 7 = " << 20 % 7 << endl;
-
-	cout << "\'A\' + \'B\' - 24 = " << 'A' + 'B' - 24 << endl;
-	cout << "char(\'A\' + \'B\' - 24) = " << char('A' + 'B' - 24) << endl;
+	cout << "The volume is:" << setw(13) << volumeOfCy(radius, height) + 1000000 << endl;
+	cout << cir(radius) << endl;
+	cout << fixed << setprecision(6) << float(100) << endl;
 
 	return 0;
 }
 
-// function defintion
-void Output(string N, string P, string E, string C, const string B)
+double volumeOfCy(double radius, double height)
 {
-	cout << N << "\t" << P << endl << E << "\t" << C << endl << B << endl;
+	return pi * pow(radius, 2) * height;
 }
 
-int Add(int input1, int input2)
+double cir(double radius)
 {
-	return input1 + input2;
+	return 2 * pi * radius;
 }
